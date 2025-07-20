@@ -87,3 +87,7 @@ def calcular_gerador():
             factor_seguranca,
             energia_total_diaria
         )
+        
+# Ponto de entrada / função principal
+if __name__ == "__main__":
+    calcular_gerador()
