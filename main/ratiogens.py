@@ -65,3 +65,7 @@ def calcular_gerador():
     # Conversão para kVA
     potencia_kva = (potencia_total / 1000) / factor_potencia
     potencia_kva *= factor_seguranca
+
+    print("\n====== RESULTADO FINAL =====")
+    print(f"Potência total em W: {round(potencia_total, 2)} W")
+    print(f"Potência ideal do gerador: {round(potencia_kva, 2)} kVA")
