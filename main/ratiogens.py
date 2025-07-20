@@ -69,3 +69,9 @@ def calcular_gerador():
     print("\n====== RESULTADO FINAL =====")
     print(f"Potência total em W: {round(potencia_total, 2)} W")
     print(f"Potência ideal do gerador: {round(potencia_kva, 2)} kVA")
+
+    # Energia diária estimada (se tempos de uso forem fornecidos)
+    energia_total_diaria = sum(
+        e['potencia'] * e['quantidade'] * e['tempo_uso'] for e in equipamentos)
+    if energia_total_diaria > 0:
+        print(f"Consumo diário estimado: {round(energia_total_diaria/1000, 2)} kWh/dia")
