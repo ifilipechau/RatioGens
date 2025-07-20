@@ -75,3 +75,15 @@ def calcular_gerador():
         e['potencia'] * e['quantidade'] * e['tempo_uso'] for e in equipamentos)
     if energia_total_diaria > 0:
         print(f"Consumo diário estimado: {round(energia_total_diaria/1000, 2)} kWh/dia")
+
+    # Exportar para TXT
+    exportar = input("\nDeseja exportar o relatório pra .txt? (s/n): ").lower()
+    if exportar == 's':
+        exportar_relatorio(
+            equipamentos,
+            potencia_total,
+            potencia_kva,
+            factor_potencia,
+            factor_seguranca,
+            energia_total_diaria
+        )
