@@ -29,3 +29,9 @@ def inserir_equipamento():
         })
 
     return equipamentos
+
+def calcular_potencia_total(equipamentos):
+    total = 0
+    for e in equipamentos:
+        total += e['potencia'] * e['quantidade']
+    return total
