@@ -15,3 +15,17 @@ def inserir_equipamento():
         potencia = float(input("Potência (W): "))
         quantidade = int(input("Quantidade: "))
         tempo_uso = float(input("Horas de uso por dia (opcional - 0 se desconhecido): "))
+
+         # Factor de arranque para motores (multiplica a potência por 2.5)
+        if tipo == "motor":
+            potencia *= 2.5
+
+        equipamentos.append({
+            "nome": nome,
+            "tipo": tipo,
+            "potencia": potencia,
+            "quantidade": quantidade,
+            "tempo_uso": tempo_uso
+        })
+
+    return equipamentos
