@@ -57,3 +57,7 @@ def calcular_gerador():
     
     equipamentos = inserir_equipamento()
     potencia_total = calcular_potencia_total(equipamentos)
+
+    # Factor de potência (customizável por tipo)
+    factor_potencia = float(input("\nEscreva o factor de potência (ex: 0.8): ") or 0.8)
+    factor_seguranca = float(input("\nEscreva o factor de segurança (ex: 1.2): ") or 1.2)
