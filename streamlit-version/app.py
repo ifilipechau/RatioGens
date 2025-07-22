@@ -29,7 +29,7 @@ for i in range(quantidade_equipamentos):
         #Caixa de seleção para tipo de equipamento
         tipo = st.selectbox(
             f"Tipo de equipamento {i+1}",
-            ["iluminação", "moto", "equipamento comum", "sensível"],
+            ["iluminação", "motor", "equipamento comum", "sensível"],
             key=f"tipo_{i}"
         )
 
